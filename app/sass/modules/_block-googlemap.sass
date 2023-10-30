@@ -1,0 +1,42 @@
+.map
+  position: relative
+  width: 100%
+  height: 100%
+
+#google-container
+  position: relative
+  width: 100%
+  height: 100%
+
+#google-map
+  position: relative
+  height: 100%
+  +MQ(XL)
+    width: 100%
+
+#zoom-in, #zoom-out
+  position: relative
+  height: 4rem
+  width: 4rem
+  border-radius: 2px
+  line-height: 4.1rem
+  margin-right: 1rem
+  font-size: 1.5rem
+  color: $text-dark
+  text-align: center
+  overflow: hidden
+  cursor: pointer
+  background-color: $accent-color
+  transition: all .3s ease-in-out
+
+  .btn-icon
+    position: relative
+    color: $text-dark
+    transition: color .3s
+
+  .no-touch &:hover
+    background-color: tint($accent-color, 20%)
+
+#zoom-out
+  margin-top: 0.6rem
+  margin-bottom: 1rem

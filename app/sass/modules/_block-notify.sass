@@ -1,0 +1,52 @@
+.notify
+  display: block
+  +position(absolute, 0 null null 0)
+  width: 100%
+  min-width: 320px
+  height: 100%
+  overflow-y: auto
+  z-index: 10
+  opacity: 0
+  visibility: hidden
+  transition: all $animation-duration ease-in-out
+  &.animate-in
+    opacity: 1
+    visibility: visible
+    .transition-el
+      opacity: 1
+      transform: translateY(0)
+    .transition-el-1
+      transition: opacity .3s $animation-delay -.2s, transform .3s $animation-delay -.2s
+    .transition-el-2
+      transition: opacity .3s $animation-delay - .1s, transform .3s $animation-delay - .1s
+    .transition-el-3
+      transition: opacity .3s $animation-delay, transform .3s $animation-delay
+    .transition-el-4
+      transition: opacity .3s $animation-delay + .1s, transform .3s $animation-delay + .1s
+    .transition-el-5
+      transition: opacity .3s $animation-delay +.2s, transform .3s $animation-delay +.2s, background-color .3s 0s, box-shadow .3s 0s
+  &.animate-out
+    opacity: 0
+    visibility: hidden
+  .transition-el
+    opacity: 0
+    transform: translateY(30px)
+    transition: opacity $animation-delay, transform $animation-delay
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    z-index: 1
+    &.dark
+      background-color: transparent
+    &.light
+      background-color: transparent
+
+.notify__container
+  position: relative
+  width: 100%
+  height: 100%
+
+.notify__content
+  position: absolute
+  left: 0
+  +center(y)
+  width: 100%

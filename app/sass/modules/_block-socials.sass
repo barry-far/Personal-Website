@@ -1,0 +1,46 @@
+.socials-text
+  display: block
+  line-height: 1.2
+  font: normal 400 1.3rem/1.2 $title-font
+  li
+    display: inline-block
+    margin-right: 16px
+    line-height: 1.2
+    &:last-of-type
+      margin-right: 0
+    a
+      display: block
+      font: normal 400 1.3rem/1.2 $title-font
+      text-transform: uppercase
+      letter-spacing: 0.1rem
+      color: $text-base
+      transition: color 0.3s ease-in-out
+      .no-touch &:hover
+        color: $accent-color-two
+  &.light
+    li
+      a
+        color: $text-light-base
+        .no-touch &:hover
+          color: $accent-color
+  +MQ(XXL)
+    font-size: 1.4rem
+    li
+      a
+        font-size: 1.4rem
+
+.email-link
+  display: block
+  font: normal 400 1.3rem/1.2 $title-font
+  text-transform: uppercase
+  letter-spacing: normal
+  color: $text-base
+  transition: color 0.3s ease-in-out
+  .no-touch &:hover
+    color: $accent-color-two
+  &.light
+    color: $text-light-base
+    .no-touch &:hover
+      color: $accent-color
+  +MQ(XXL)
+    font-size: 1.4rem

@@ -1,0 +1,27 @@
+.features__item
+  position: relative
+  text-align: left
+  margin-bottom: 5rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(M)
+    margin-bottom: 0
+
+.features__image
+  display: block
+  width: auto
+  height: auto
+
+.features__title
+  font: normal 400 2.4rem/1.2 $title-font
+  letter-spacing: -0.1rem
+  color: $text-dark
+  margin-top: 2.2rem
+  &.light
+    color: $text-light
+
+.features__text
+  margin-top: 1.4rem
+  color: $text-base
+  &.light
+    color: $text-light-base

@@ -1,0 +1,151 @@
+.main
+  position: relative
+  width: 100%
+  min-width: 320px
+  height: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  z-index: 9
+  background-color: $base-color
+  transform: translateX(0)
+  transition: transform $animation-duration ease-in-out
+  .main__headline,
+  .main__header .menu-trigger
+    transition: all $animation-duration ease-in-out
+  &.notify-is-visible
+    .main__headline,
+    .main__header .menu-trigger
+      opacity: 0
+      visibility: hidden
+  &.menu-is-visible
+    .main__content
+      opacity: 0
+      transition: opacity $animation-duration
+  &.move-in
+    transform: translateX(0)
+  &.move-out
+    transform: translateX(-100%)
+  +MQ(XL)
+    overflow: hidden
+    &.move-out
+      transform: translateX(-50%)
+
+.main__content
+  position: relative
+  height: auto
+  background-color: $base-color
+  transition: opacity $animation-duration
+  +MQ(XL)
+    height: 100%
+
+.main__header
+  position: relative
+  width: 100%
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+
+.header__container
+  position: relative
+  height: 100%
+  padding: 3rem 0 0 0
+  +MQ(XXL)
+    padding: 4rem 0 0 0
+
+.header__content
+  position: relative
+  padding: 0 10%
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.logo
+  position: relative
+  padding: 1rem 0
+  width: auto
+  img
+    width: auto
+
+.main__headline
+  position: relative
+  width: 100%
+  padding: 10rem 0
+  +MQ(XL)
+    position: absolute
+    left: 0
+    +center(y)
+    padding: 0
+
+.main__dataline
+  position: relative
+  width: 100%
+  padding: 0 10% 3rem 10%
+  z-index: 2
+  & > div
+    line-height: 1.2
+  +MQ(XL)
+    +position(absolute, null null 3.6rem 0)
+    padding: 0 8rem
+  +MQ(XXL)
+    +position(absolute, null null 4rem 0)
+    padding: 0 10rem
+
+.headline__content
+  position: relative
+  width: 100%
+  padding: 0 10%
+  &.centered
+    text-align: center
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.main__media
+  position: relative
+  height: 100vh
+  min-height: 600px
+  background-color: $accent-color-two
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  +MQ(XL)
+    height: 100%
+    min-height: auto
+
+.mainmedia__container
+  +position(absolute, 9rem null null 10%)
+  width: calc(100% - 20%)
+  height: calc(100% - 18rem)
+  +MQ(XL)
+    +position(absolute, 9rem null null 12rem)
+    width: calc(100% - 24rem)
+  +MQ(XXL)
+    +position(absolute, 10rem null null 16rem)
+    width: calc(100% - 32rem)
+    height: calc(100% - 20rem)
+
+.mainmedia__content
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.mainmedia__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+
+.mainmedia__copyright
+  +position(absolute, null null 3.6rem 0)
+  width: 100%
+  padding: 0 10%
+  text-align: center
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    +position(absolute, null null 4rem 0)
+    padding: 0 10rem

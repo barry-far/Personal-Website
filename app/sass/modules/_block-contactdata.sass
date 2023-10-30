@@ -1,0 +1,57 @@
+.contact-data__item
+  position: relative
+  text-align: left
+  margin-bottom: 3rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(S)
+    &:nth-of-type(3)
+      margin-bottom: 0
+
+.contact-data__title
+  margin-bottom: .4rem
+
+.contact-data__text
+  position: relative
+  font: normal 400 1.4rem/1.6 $default-font
+  color: $text-mute
+  a
+    position: relative
+    font: normal 400 1.4rem/1.6 $default-font
+    color: $text-mute
+    z-index: 1
+    &::after
+      content: ''
+      display: block
+      +position(absolute, null null -1px 0)
+      width: 0
+      height: 1px
+      background-color: $accent-color-two
+      transition: all .3s ease-in-out
+    .no-touch &:hover
+      color: $text-dark
+      &::after
+        width: 100%
+
+.contact-data__socials
+  li
+    display: block
+    position: relative
+    font: normal 400 1.4rem/1.6 $default-font
+    a
+      position: relative
+      font: normal 400 1.4rem/1.6 $default-font
+      color: $text-mute
+      &::after
+        content: ''
+        display: block
+        +position(absolute, null null -1px 0)
+        width: 0
+        height: 1px
+        background-color: $accent-color-two
+        transition: all .3s ease-in-out
+    .no-touch &:hover
+      a
+        color: $text-dark
+        &::after
+          width: 100%
