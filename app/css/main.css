@@ -45,7 +45,7 @@
 }
 
 .main-image-c1-2 {
-  background-image: url("/app/img/main.png");
+  background-image: url("/app/img/1080x1440-c1-bg-about.jpg");
 }
 
 .main-image-c1-3 {
@@ -53,15 +53,15 @@
 }
 
 .about-image-c1 {
-  background-image: url("/app/img/1080x1440-c1-bg-about.jpg");
+  background-image: url("/app/img/main.png");
 }
 
 .works-image-c1 {
-  background-image: url("/app/img/main.png");
+  background-image: url("/app/img/backgrounds/1080x1440-c1-bg-works.jpg");
 }
 
 .contact-image-c1 {
-  background-image: url("/app/img/main.png");
+  background-image: url("/app/img/backgrounds/1080x1440-c1-bg-home-3.jpg");
 }
 
 /* ------------------------------------------------*/
