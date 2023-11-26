@@ -1,17 +1,4 @@
 // ------------------------------------------------
-// Project Name: Oomph - Coming Soon & Landing Page Template
-// Project Description: Oomph - awesome coming soon template to kick-start your project
-// Tags: mix_design, oomph, coming soon, under construction, template, coming soon page, html5, css3
-// Version: 3.0.1
-// Build Date: December 2020
-// Last Update: October 2022
-// This product is available exclusively on Themeforest
-// Author: mix_design
-// Author URI: https://themeforest.net/user/mix_design
-// File name: custom.js
-// ------------------------------------------------
-
-// ------------------------------------------------
 // Table of Contents
 // ------------------------------------------------
 //
@@ -322,6 +309,11 @@ $(function() {
       close: function() { $('body').removeClass('overflow-hidden'); }
     }
 	});
+
+  $('#showreel-trigger').on('click', function() {
+    console.log("Clicked!"); // Check if this gets logged
+    $(this).toggleClass('rotate');
+  });
   // --------------------------------------------- //
   // Magnific Popup Video End
   // --------------------------------------------- //

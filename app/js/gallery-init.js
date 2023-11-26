@@ -1,9 +1,3 @@
-// ------------------------------------------------
-// Author: dimsemenov
-// Author URI: https://github.com/dimsemenov
-// File name: gallery-init.js
-// https://codepen.io/dimsemenov/pen/ZYbPJM
-// ------------------------------------------------
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 

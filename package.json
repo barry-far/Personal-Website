@@ -1,7 +1,7 @@
 {
-  "name": "oomph",
-  "version": "3.0.1",
-  "description": "Oomph - Stylish Coming Soon & Landing Page Template",
+  "name": "barryfa",
+  "version": "1.0.3",
+  "description": "Bardia Fardar Portfolio Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
