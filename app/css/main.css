@@ -354,7 +354,7 @@ img {
 }
 
 .rotate-object img {
-  animation: rotate 2s linear infinite;
+  animation: rotate 4s linear infinite;
 }
 
 
