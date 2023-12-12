@@ -397,24 +397,25 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
-  $("#contact-form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-      $('.contact').find('.form').addClass('is-hidden');
-      $('.contact').find('.reply-group').addClass('is-visible');
-			setTimeout(function() {
-				// Done Functions
+
+  $("#contact-form").submit(function(event) {
+    event.preventDefault(); 
+    var th = $(this);
+    var name = th.find('input[name="Name"]').val();
+    var company = th.find('input[name="Company"]').val();
+    var phone = th.find('input[name="Phone"]').val();
+    var message = th.find('textarea[name="Message"]').val();
+    var mailtoLink = `mailto:barry@mizegerd.agency?subject=${encodeURIComponent(name)} - ${encodeURIComponent(company)}&body=Phone number : ${encodeURIComponent(phone)}%0A%0A${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
+    $('.contact').find('.form').addClass('is-hidden');
+    $('.contact').find('.reply-group').addClass('is-visible');
+    setTimeout(function() {
         $('.contact').find('.reply-group').removeClass('is-visible');
         $('.contact').find('.form').delay(300).removeClass('is-hidden');
-				th.trigger("reset");
-			}, 5000);
-		});
-		return false;
-	});
+        th.trigger("reset");
+    }, 5000);
+});
+
   // --------------------------------------------- //
   // Contact Form End
   // --------------------------------------------- //

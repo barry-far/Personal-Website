@@ -7,12 +7,24 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "oomph",
-    "coming",
-    "soon",
-    "template"
+    "Bardia Fardar",
+    "Portfolio",
+    "Software Engineer Portfolio",
+    "Barry Fardar",
+    "بردیا فاردار",
+    "Professional Web Developer",
+    "Creative Portfolio Website",
+    "Professional Web Developer",
+    "html5",
+    "css3",
+    "UI/UX Designer Portfolio",
+    "clean",
+    "agency",
+    "Innovative Software Solutions",
+    "Creative Design Portfolio",
+    "Software Development Skills"
   ],
-  "author": "mix_design",
+  "author": "barryfa",
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
