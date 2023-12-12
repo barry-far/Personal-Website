@@ -1,0 +1,84 @@
+.menu
+  display: block
+  +position(fixed, 0 null null 0)
+  width: 100%
+  min-width: 320px
+  height: 100%
+  background-color: (shade($base-color, 20%))
+  background-repeat: no-repeat
+  background-position: bottom center
+  background-size: cover
+  background-image: url("../img/svg/bg-lines-menu.svg")
+  overflow-y: auto
+  z-index: 10
+  opacity: 0
+  visibility: hidden
+  transition: all $animation-duration ease-in-out
+  .transition-el
+    opacity: 0
+    transform: translateY(30px)
+    transition: opacity $animation-duration, transform $animation-duration
+  .opacity-el
+    opacity: 0
+    transition: opacity $animation-duration
+  &.animate-in
+    opacity: 1
+    visibility: visible
+    .transition-el
+      opacity: 1
+      transform: translateY(0)
+    .opacity-el
+      opacity: 1
+    .transition-el-1
+      transition: opacity .3s .7s, transform .3s .7s
+    .transition-el-2
+      transition: opacity .3s .8s, transform .3s .8s
+    .transition-el-3
+      transition: opacity .3s .9s, transform .3s .9s
+    .transition-el-4
+      transition: opacity .3s 1s, transform .3s 1s
+    .transition-el-5
+      transition: opacity .3s 1.1s, transform .3s 1.1s
+    .opacity-el-1
+      transition: opacity $animation-duration + .2s 1.3s
+  &.animate-out
+    opacity: 0
+    visibility: hidden
+  &.move-out
+    transform: translateX(-100%)
+  +MQ(XL)
+    width: 50%
+
+.menu__container
+  position: relative
+  width: 100%
+  height: 100%
+  min-height: 600px
+
+.menu__content
+  height: 100%
+  min-height: 600px
+
+.navigation
+  display: block
+  position: absolute
+  left: 0
+  +center(y)
+  width: 100%
+  padding: 0 10%
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.dataline
+  +position(absolute, null null 3rem 0)
+  width: 100%
+  padding: 0 10%
+  line-height: 1.2
+  +MQ(XL)
+    +position(absolute, null null 3rem 0)
+    padding: 0 8rem
+  +MQ(XXL)
+    +position(absolute, null null 3.4rem 0)
+    padding: 0 10rem

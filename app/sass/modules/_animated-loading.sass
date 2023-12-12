@@ -1,0 +1,44 @@
+body
+  .rotate-object
+    opacity: 0
+  .main
+    .main__header,
+    .main__socials,
+    .main__dataline
+      opacity: 0
+    .main__headline
+      .loading-el
+        opacity: 0
+        transform: translateY(30px)
+    .main__media
+      opacity: 0
+      transform: translateX(20%)
+  &.loaded
+    .main
+      // 1 step
+      .main__media
+        opacity: 1
+        transform: translateX(0)
+        transition: transform $animation-duration, opacity $animation-duration ease-in-out
+      // 2 step
+      .main__headline
+        .loading-el
+          opacity: 1
+          transform: translateY(0)
+        .loading-el-1
+          transition: opacity .4s $animation-duration + .1s, transform .4s $animation-duration + .1s
+        .loading-el-2
+          transition: opacity .4s $animation-duration + .2s, transform .4s $animation-duration + .2s
+        .loading-el-3
+          transition: opacity .4s $animation-duration + .3s, transform .4s $animation-duration + .3s
+        .loading-el-4
+          transition: opacity .4s $animation-duration + .4s, transform .4s $animation-duration + .4s
+      // 3 step
+      .main__header,
+      .main__socials,
+      .main__dataline
+        opacity: 1
+        transition: opacity .8s $animation-duration + .8s
+    .rotate-object
+      opacity: 1
+      transition: opacity .8s $animation-duration + .8s

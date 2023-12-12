@@ -1,0 +1,676 @@
+/*! ------------------------------------------------
+ * Table of Contents
+ * ------------------------------------------------
+ *  1. Basic Color Options
+ *  2. Typography
+ *  3. Buttons & Controls
+ *  4. Forms and Forms Reply Groups
+ *  5. Main Section
+ *  6. Menu
+ *  7. Socials
+ *  8. Countdown
+ *  9. Content Section
+ *  10. Custom Scroll
+ *  11. Custom Skillbars
+ *  12. Team
+ *  13. Contact Data
+ *  14. Google Map
+ *  15. Gallery
+ * ------------------------------------------------
+ * Table of Contents End
+ * ------------------------------------------------ */
+/* ------------------------------------------------*/
+/* Basic Color Options Start */
+/* ------------------------------------------------*/
+::-moz-selection {
+  background-color: #6448be;
+  color: #00f0ff;
+}
+::selection {
+  background-color: #6448be;
+  color: #00f0ff;
+}
+
+::-webkit-scrollbar {
+  background: #332c49;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #332c49;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00f0ff;
+}
+
+body {
+  color: #444444;
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #1a1a1a;
+}
+
+.color-layer-medium {
+  background-color: rgba(12, 4, 38, 0.6);
+}
+
+.color-layer-dark {
+  background-color: rgba(12, 4, 38, 0.8);
+}
+
+.bg-light {
+  background-color: #ffffff;
+}
+
+.bg-medium {
+  background-color: #f2f2f2;
+}
+
+.bg-dark {
+  background-color: #0c0426;
+}
+
+/* ------------------------------------------------*/
+/* Basic Color Options End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Typography Colors Start */
+/* ------------------------------------------------*/
+h1 {
+  color: #1a1a1a;
+}
+h1.light {
+  color: #ffffff;
+}
+
+.typed-cursor::before {
+  background-color: #00f0ff;
+}
+
+.headline__subtitle {
+  color: #1a1a1a;
+}
+.headline__subtitle.light {
+  color: #ffffff;
+}
+
+.headline__text {
+  color: #444444;
+}
+.headline__text a {
+  color: #444444;
+}
+.no-touch .headline__text a:hover {
+  color: #7d5aed;
+}
+.headline__text.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+.headline__text.light a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.no-touch .headline__text.light a:hover {
+  color: #00f0ff;
+}
+
+h2 {
+  color: #1a1a1a;
+}
+h2::after {
+  background-color: #7d5aed;
+}
+h2.light {
+  color: #ffffff;
+}
+h2.light::after {
+  background-color: #00f0ff;
+}
+
+.section__subtitle {
+  color: #1a1a1a;
+}
+.section__subtitle.light {
+  color: #ffffff;
+}
+
+.section__text {
+  color: #444444;
+}
+.section__text a,
+.section__text span {
+  color: #1a1a1a;
+}
+.no-touch .section__text a:hover {
+  color: #7d5aed;
+}
+.section__text.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+.section__text.light a,
+.section__text.light span {
+  color: #ffffff;
+}
+.no-touch .section__text.light a:hover {
+  color: #00f0ff;
+}
+
+h3 {
+  color: #1a1a1a;
+}
+h3.light {
+  color: #ffffff;
+}
+
+.block__subtitle {
+  color: #1a1a1a;
+}
+.block__subtitle.light {
+  color: #ffffff;
+}
+
+.block__text {
+  color: #444444;
+}
+.block__text.light {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h4 {
+  color: #1a1a1a;
+}
+h4 small {
+  color: #444444;
+}
+h4.light {
+  color: #ffffff;
+}
+h4.light small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h5 {
+  color: #1a1a1a;
+}
+h5.light {
+  color: #ffffff;
+}
+
+p {
+  color: #444444;
+}
+p.additional-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.popup__title {
+  color: #1a1a1a;
+}
+.popup__title.light {
+  color: #ffffff;
+}
+
+.popup__subtitle {
+  color: #1a1a1a;
+}
+.popup__subtitle.light {
+  color: #ffffff;
+}
+
+.popup__text {
+  color: #444444;
+}
+.popup__text.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navigation li span {
+  color: #666666;
+}
+.navigation li a {
+  color: #1a1a1a;
+}
+.no-touch .navigation li a:hover {
+  color: #7d5aed;
+}
+.navigation li.light span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.navigation li.light a {
+  color: #ffffff;
+}
+.no-touch .navigation li.light a:hover {
+  color: #00f0ff;
+}
+
+blockquote p {
+  color: #1a1a1a;
+}
+blockquote cite {
+  color: #444444;
+}
+blockquote::before {
+  background-image: url("../../img/icons/color-1/icon-quote.svg");
+}
+blockquote.light p {
+  color: #ffffff;
+}
+blockquote.light cite {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------------------------------*/
+/* Typography Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Buttons & Controls Colors Start */
+/* ------------------------------------------------*/
+.menu-trigger span:before, .menu-trigger span::after {
+  background-color: #ffffff;
+}
+.menu-trigger.dark span:before, .menu-trigger.dark span::after {
+  background-color: #000000;
+}
+
+.section-close span:before, .section-close span::after {
+  background-color: #666666;
+}
+.no-touch .section-close:hover span:before, .no-touch .section-close:hover span::after {
+  background-color: #000000;
+}
+.section-close.light span:before, .section-close.light span::after {
+  background-color: #ffffff;
+}
+.no-touch .section-close.light:hover span:before, .no-touch .section-close.light:hover span::after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-solid {
+  background-color: #00f0ff;
+  border: 1px solid #00f0ff;
+  color: #1a1a1a;
+  -webkit-box-shadow: 0px 6px 38px -9px rgba(0, 240, 255, 0.34);
+     -moz-box-shadow: 0px 6px 38px -9px rgba(0, 240, 255, 0.34);
+          box-shadow: 0px 6px 38px -9px rgba(0, 240, 255, 0.34);
+}
+.no-touch .btn-solid:hover {
+  -webkit-box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+     -moz-box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+          box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+.no-touch .btn-outline-light:hover {
+  background-color: #00f0ff;
+  border: 1px solid #00f0ff;
+  color: #1a1a1a;
+  -webkit-box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+     -moz-box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+          box-shadow: 0px 10px 38px -9px rgba(0, 240, 255, 0.64);
+}
+
+/* ------------------------------------------------*/
+/* Buttons & Controls Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Forms and Forms Reply Groups Colors Start */
+/* ------------------------------------------------*/
+.form-light ::-webkit-input-placeholder {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-light :-moz-placeholder {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-light ::-moz-placeholder {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-light :-ms-input-placeholder {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+.form-light input:focus:required:invalid,
+.form-light textarea:focus:required:invalid {
+  color: #ffffff;
+}
+.form-light input:required:valid,
+.form-light textarea:required:valid {
+  color: #ffffff;
+}
+.form-light input, .form-light textarea {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+.form-light input:focus, .form-light textarea:focus {
+  border: 1px solid #00f0ff;
+}
+.form-light .inputs-description {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-dark ::-webkit-input-placeholder {
+  color: rgba(26, 26, 26, 0.7);
+}
+.form-dark :-moz-placeholder {
+  color: rgba(26, 26, 26, 0.7);
+}
+.form-dark ::-moz-placeholder {
+  color: rgba(26, 26, 26, 0.7);
+}
+.form-dark :-ms-input-placeholder {
+  color: rgba(26, 26, 26, 0.7);
+}
+.form-dark input:focus:required:invalid,
+.form-dark textarea:focus:required:invalid {
+  color: #1a1a1a;
+}
+.form-dark input:required:valid,
+.form-dark textarea:required:valid {
+  color: #1a1a1a;
+}
+.form-dark input, .form-dark textarea {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #1a1a1a;
+}
+.form-dark input:focus, .form-dark textarea:focus {
+  border: 1px solid #7d5aed;
+}
+.form-dark .inputs-description {
+  color: #666666;
+}
+
+.reply-group__icon {
+  color: #7d5aed;
+}
+.reply-group__icon.light {
+  color: #00f0ff;
+}
+
+.reply-group__title {
+  color: #1a1a1a;
+}
+.reply-group__title.light {
+  color: #ffffff;
+}
+
+.reply-group__text {
+  color: #444444;
+}
+.reply-group__text.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------------------------------*/
+/* Forms and Forms Reply Groups Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Main Section Colors Start */
+/* ------------------------------------------------*/
+.main {
+  background-color: #0c0426;
+}
+
+.main__content {
+  background-color: #0c0426;
+}
+
+.main__media {
+  background-color: #7d5aed;
+  background-image: url("../../img/svg/bg-gradient-main.svg");
+}
+
+/* ------------------------------------------------*/
+/* Main Section Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Menu Colors Start */
+/* ------------------------------------------------*/
+.menu {
+  background-color: #0c0426;
+  background-image: url("../../img/svg/bg-lines-menu.svg");
+}
+
+/* ------------------------------------------------*/
+/* Menu Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Socials Colors Start */
+/* ------------------------------------------------*/
+.socials-text li a {
+  color: #444444;
+}
+.no-touch .socials-text li a:hover {
+  color: #7d5aed;
+}
+.socials-text.light li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.no-touch .socials-text.light li a:hover {
+  color: #00f0ff;
+}
+
+.email-link {
+  color: #444444;
+}
+.no-touch .email-link:hover {
+  color: #7d5aed;
+}
+.email-link.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+.no-touch .email-link.light:hover {
+  color: #00f0ff;
+}
+
+/* ------------------------------------------------*/
+/* Socials Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Countdown Colors Start */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Countdown Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Content Section Colors Start */
+/* ------------------------------------------------*/
+.inner {
+  background-color: #f2f2f2;
+}
+
+.inner__media {
+  background-color: #7d5aed;
+  background-image: url("../../img/svg/bg-gradient-main.svg");
+}
+
+/* ------------------------------------------------*/
+/* Content Section Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Custom Skillbars Colors Start */
+/* ------------------------------------------------*/
+.skillbar-title {
+  color: #1a1a1a;
+}
+
+.skillbar-bar {
+  background-color: #7d5aed;
+}
+
+.skill-bar-percent {
+  color: #1a1a1a;
+}
+
+/* ------------------------------------------------*/
+/* Custom Skillbars Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Features Colors Start */
+/* ------------------------------------------------*/
+.features__title {
+  color: #1a1a1a;
+}
+.features__title.light {
+  color: #ffffff;
+}
+
+.features__text {
+  color: #444444;
+}
+.features__text.light {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------------------------------*/
+/* Features Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Team Colors Start */
+/* ------------------------------------------------*/
+.team__title {
+  color: #1a1a1a;
+}
+.team__title small {
+  color: #666666;
+}
+
+.team__text {
+  color: #444444;
+}
+
+.team__socials li a {
+  color: #666666;
+}
+.no-touch .team__socials li:hover a {
+  color: #7d5aed;
+}
+
+/* ------------------------------------------------*/
+/* Team Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Contact Data Colors Start */
+/* ------------------------------------------------*/
+.contact-data__text {
+  color: #666666;
+}
+.contact-data__text a {
+  color: #666666;
+}
+.contact-data__text a::after {
+  background-color: #7d5aed;
+}
+.no-touch .contact-data__text a:hover {
+  color: #1a1a1a;
+}
+
+.contact-data__socials li a {
+  color: #666666;
+}
+.contact-data__socials li a::after {
+  background-color: #7d5aed;
+}
+.no-touch .contact-data__socials li:hover a {
+  color: #1a1a1a;
+}
+
+/* ------------------------------------------------*/
+/* Contact Data Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Google Map Colors Start */
+/* ------------------------------------------------*/
+#zoom-in, #zoom-out {
+  color: #1a1a1a;
+  background-color: #00f0ff;
+}
+#zoom-in .btn-icon, #zoom-out .btn-icon {
+  color: #1a1a1a;
+}
+.no-touch #zoom-in:hover, .no-touch #zoom-out:hover {
+  background-color: #00c0cc;
+}
+
+/* ------------------------------------------------*/
+/* Google Map Colors End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Gallery Custom colors Start */
+/* ------------------------------------------------*/
+.my-gallery figure:nth-of-type(1)::after {
+  background-color: #7d5aed;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 90, 237, 0)), color-stop(30%, rgba(125, 90, 237, 0)), to(rgba(125, 90, 237, 0.8)));
+  background: -moz-linear-gradient(top, rgba(125, 90, 237, 0) 0%, rgba(125, 90, 237, 0) 30%, rgba(125, 90, 237, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(125, 90, 237, 0) 0%, rgba(125, 90, 237, 0) 30%, rgba(125, 90, 237, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(125, 90, 237, 0) 0%, rgba(125, 90, 237, 0) 30%, rgba(125, 90, 237, 0.8) 100%);
+}
+.my-gallery figure:nth-of-type(2)::after, .my-gallery figure:nth-of-type(3)::after {
+  background-color: #0c0426;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 4, 38, 0)), color-stop(30%, rgba(12, 4, 38, 0)), to(rgba(12, 4, 38, 0.6)));
+  background: -moz-linear-gradient(top, rgba(12, 4, 38, 0) 0%, rgba(12, 4, 38, 0) 30%, rgba(12, 4, 38, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(12, 4, 38, 0) 0%, rgba(12, 4, 38, 0) 30%, rgba(12, 4, 38, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(12, 4, 38, 0) 0%, rgba(12, 4, 38, 0) 30%, rgba(12, 4, 38, 0.6) 100%);
+}
+.my-gallery figure:nth-of-type(4)::after {
+  background-color: #00f0ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 240, 255, 0)), color-stop(30%, rgba(0, 240, 255, 0)), to(rgba(0, 240, 255, 0.8)));
+  background: -moz-linear-gradient(top, rgba(0, 240, 255, 0) 0%, rgba(0, 240, 255, 0) 30%, rgba(0, 240, 255, 0.8) 100%);
+  background: -o-linear-gradient(top, rgba(0, 240, 255, 0) 0%, rgba(0, 240, 255, 0) 30%, rgba(0, 240, 255, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(0, 240, 255, 0) 0%, rgba(0, 240, 255, 0) 30%, rgba(0, 240, 255, 0.8) 100%);
+}
+.my-gallery figure figcaption h4 {
+  color: #000000;
+}
+.my-gallery figure figcaption h4 small {
+  color: #000000;
+}
+.my-gallery figure:nth-of-type(2) figcaption h4, .my-gallery figure:nth-of-type(3) figcaption h4 {
+  color: #ffffff;
+}
+.my-gallery figure:nth-of-type(2) figcaption h4 small, .my-gallery figure:nth-of-type(3) figcaption h4 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media only screen and (min-width: 1200px) {
+  .my-gallery figure:nth-of-type(1)::after {
+    background: rgba(125, 90, 237, 0.8);
+  }
+  .my-gallery figure:nth-of-type(2)::after, .my-gallery figure:nth-of-type(3)::after {
+    background: rgba(12, 4, 38, 0.8);
+  }
+  .my-gallery figure:nth-of-type(4)::after {
+    background: rgba(0, 240, 255, 0.8);
+  }
+}
+
+.pswp__caption__center h4 {
+  color: #ffffff;
+}
+.pswp__caption__center h4 small {
+  color: rgba(255, 255, 255, 0.7);
+}
+.pswp__caption__center p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pswp__bg {
+  background: #0a031e;
+}
+
+.pswp__button--close {
+  background-color: #00f0ff;
+}
+
+/* ------------------------------------------------*/
+/* Gallery Custom colors End */
+/* ------------------------------------------------*/

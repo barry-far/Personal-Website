@@ -1,0 +1,73 @@
+/*! ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Loader Styles
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Mixins and Common Variables
+@import "../partials/layout"
+@import "../partials/mixins"
+@import "../partials/variables"
+
+// Loader Mixins and Variables
+$base-color: #0c0426
+$accent-color: #00f0ff
+$accent-color-two: #7d5aed
+$additional-color: #f2f2f2
+
+/* ------------------------------------------------*/
+/* Loader Styles Start
+/* ------------------------------------------------*/
+.loader
+  +position(fixed, 0 0 0 0)
+  z-index: 9999
+  background-color: $base-color
+  opacity: 1
+  visibility: visible
+  transition: all .6s ease-in-out
+  &.fade
+    //background-color: $bg-dark
+  &.loaded
+    opacity: 0
+    visibility: hidden
+
+.loader__content
+  position: absolute
+  +center
+
+.loader__logo
+  width: 160px
+  img
+    display: block
+    width: 100%
+    height: auto
+
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.fadeIn
+  animation: fadeIn .6s 1
+  animation-fill-mode: both
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+.fadeOut
+  animation: fadeOut .6s 1
+  animation-fill-mode: both
+/* ------------------------------------------------*/
+/* Loader Styles End
+/* ------------------------------------------------*/

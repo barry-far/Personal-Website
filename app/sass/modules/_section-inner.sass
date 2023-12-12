@@ -1,0 +1,120 @@
+.inner
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  background-color: pink
+  z-index: 3
+  opacity: 0
+  visibility: hidden
+  transform: translateX(0)
+  transition: opacity $animation-duration, visibility $animation-duration, transform $animation-duration ease-in-out
+  &.animate-in
+    z-index: 11
+    opacity: 1
+    visibility: visible
+  &.animate-out
+    transform: translateX(100%)
+  &.to-back
+    opacity: 0
+    visibility: hidden
+  +MQ(XL)
+    overflow: hidden
+    &.animate-out
+      transform: translateX(50%)
+
+.inner__content,
+.inner__media
+  position: relative
+  +MQ(XL)
+    height: 100%
+
+.inner__content
+  height: auto
+  +MQ(XL)
+    height: 100%
+    overflow-y: auto
+
+.inner__block
+  position: relative
+  padding: 9rem 0
+  &.no-padding
+    padding: 0
+  +MQ(XXL)
+    padding: 10rem 0
+
+.inner__container
+  position: relative
+  padding: 0 10%
+  margin-bottom: 5rem
+  &:last-of-type
+    margin-bottom: 0
+  &.grid-block
+    padding: 0 calc(10% - 15px)
+  &.notify-width
+    max-width: 500px
+  +MQ(M)
+    &.notify-width
+      max-width: 600px
+  +MQ(XL)
+    padding: 0 8rem
+    &.grid-block
+      padding: 0 calc(8rem - 15px)
+    &.notify-width
+      max-width: 500px
+  +MQ(XXL)
+    padding: 0 10rem
+    &.grid-block
+      padding: 0 calc(10rem - 15px)
+    &.notify-width
+      max-width: 690px
+
+.inner__media
+  height: 100vh
+  min-height: 600px
+  background-color: $accent-color-two
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  +MQ(XL)
+    height: 100%
+    min-height: auto
+
+.media__container
+  +position(absolute, 9rem null null 10%)
+  width: calc(100% - 20%)
+  height: calc(100% - 18rem)
+  background-color: pink
+  +MQ(XL)
+    +position(absolute, 9rem null null 12rem)
+    width: calc(100% - 24rem)
+  +MQ(XXL)
+    +position(absolute, 10rem null null 16rem)
+    width: calc(100% - 32rem)
+    height: calc(100% - 20rem)
+
+.media__content
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.media__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+
+.media__copyright
+  +position(absolute, null null 3.6rem 0)
+  width: 100%
+  padding: 0 10%
+  text-align: center
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    +position(absolute, null null 4rem 0)
+    padding: 0 10rem

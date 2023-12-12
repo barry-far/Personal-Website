@@ -1,0 +1,11 @@
+{
+  "name": "Oomph - Coming Soon & Landing Page Template",
+  "short_name": "Oomph",
+  "icons": [
+    { "src": "/img/favicon/color-1/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/img/favicon/color-1/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#efefef",
+  "background_color": "#efefef",
+  "display": "standalone"
+}

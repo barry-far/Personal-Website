@@ -1,0 +1,607 @@
+/*! ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Basic Color Options
+    2. Typography
+    3. Buttons & Controls
+    4. Forms and Forms Reply Groups
+    5. Main Section
+    6. Menu
+    7. Socials
+    8. Countdown
+    9. Content Section
+    10. Custom Scroll
+    11. Custom Skillbars
+    12. Team
+    13. Contact Data
+    14. Google Map
+    15. Gallery
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Libs, Mixins and Variables
+@import "../partials/layout"
+@import "../partials/mixins"
+@import "../partials/variables"
+
+// Color Variables
+// Basic Colors
+$base-color: #0c0426
+$accent-color: #00f0ff
+$accent-color-two: #7d5aed
+$additional-color: #f2f2f2
+
+$white: #ffffff
+$black: #000000
+
+$text-dark: #1a1a1a
+$text-base: #444444
+$text-mute: #666666
+$text-light: #ffffff
+$text-light-base: rgba(#ffffff, .7)
+$text-light-mute: rgba(#ffffff, .5)
+
+// Cover layers
+=cover-medium
+  background-color: rgba($base-color, 0.6)
+=cover-dark
+  background-color: rgba($base-color, 0.8)
+=cover-medium-gradient
+  background: linear-gradient(135deg, rgba(20,13,50,0.8) 0%,rgba(20,13,50,0.8) 20%,rgba(20,13,50,0) 100%)
+
+// Backgrounds
+=bg-light
+  background-color: $white
+=bg-medium
+  background-color: $additional-color
+=bg-dark
+  background-color: $base-color
+
+/* ------------------------------------------------*/
+/* Basic Color Options Start
+/* ------------------------------------------------*/
+::selection
+  background-color: shade($accent-color-two, 20%)
+  color: $accent-color
+
+::-webkit-scrollbar
+  background: tint($base-color, 16%)
+
+::-webkit-scrollbar-track
+  background-color: tint($base-color, 16%)
+
+::-webkit-scrollbar-thumb
+  background-color: $accent-color
+
+body
+  color: $text-base
+  background-color: $additional-color
+
+a
+  color: $text-dark
+
+.color-layer-medium
+  +cover-medium
+
+.color-layer-dark
+  +cover-dark
+
+.bg-light
+  +bg-light
+.bg-medium
+  +bg-medium
+.bg-dark
+  +bg-dark
+/* ------------------------------------------------*/
+/* Basic Color Options End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Typography Colors Start
+/* ------------------------------------------------*/
+h1
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.typed-cursor
+  &::before
+    background-color: $accent-color
+
+.headline__subtitle
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.headline__text
+  color: $text-base
+  a
+    color: $text-base
+    .no-touch &:hover
+      color: $accent-color-two
+  &.light
+    color: $text-light-base
+    a
+      color: $text-light-base
+      .no-touch &:hover
+        color: $accent-color
+
+h2
+  color: $text-dark
+  &::after
+    background-color: $accent-color-two
+  &.light
+    color: $text-light
+    &::after
+      background-color: $accent-color
+
+.section__subtitle
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.section__text
+  color: $text-base
+  a,
+  span
+    color: $text-dark
+  a
+    .no-touch &:hover
+      color: $accent-color-two
+  &.light
+    color: $text-light-base
+    a,
+    span
+      color: $text-light
+    a
+      .no-touch &:hover
+        color: $accent-color
+
+h3
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.block__subtitle
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.block__text
+  color: $text-base
+  &.light
+    font-weight: 300
+    color: $text-light-mute
+
+h4
+  color: $text-dark
+  small
+    color: $text-base
+  &.light
+    color: $text-light
+    small
+      color: $text-light-base
+
+h5
+  color: $text-dark
+  &.light
+    color: $text-light
+
+p
+  color: $text-base
+  &.additional-text
+    color: rgba($black, .6)
+
+.popup__title
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.popup__subtitle
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.popup__text
+  color: $text-base
+  &.light
+    color: $text-light-base
+
+.navigation
+  li
+    span
+      color: $text-mute
+    a
+      color: $text-dark
+      .no-touch &:hover
+        color: $accent-color-two
+    &.light
+      span
+        color: $text-light-mute
+      a
+        color: $text-light
+        .no-touch &:hover
+          color: $accent-color
+
+blockquote
+  p
+    color: $text-dark
+  cite
+    color: $text-base
+  &::before
+    background-image: url("../../img/icons/color-1/icon-quote.svg")
+  &.light
+    p
+      color: $text-light
+    cite
+      color: $text-light-base
+/* ------------------------------------------------*/
+/* Typography Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Controls Colors Start
+/* ------------------------------------------------*/
+.menu-trigger
+  span
+    &:before,
+    &::after
+      background-color: $white
+  &.dark
+    span
+      &:before,
+      &::after
+        background-color: $black
+
+.section-close
+  span
+    &:before,
+    &::after
+      background-color: $text-mute
+  .no-touch &:hover
+    span
+      &:before,
+      &::after
+        background-color: $black
+  &.light
+    span
+      &:before,
+      &::after
+        background-color: $white
+    .no-touch &:hover
+      span
+        &:before,
+        &::after
+          background-color: rgba($white, .5)
+
+.btn-solid
+  background-color: $accent-color
+  border: 1px solid $accent-color
+  color: $text-dark
+  box-shadow: 0px 6px 38px -9px rgba($accent-color,0.34)
+  .no-touch &:hover
+    box-shadow: 0px 10px 38px -9px rgba($accent-color,0.64)
+
+.btn-outline-light
+  background-color: transparent
+  color: $text-light
+  border: 1px solid $white
+  box-shadow: none
+  .no-touch &:hover
+    background-color: $accent-color
+    border: 1px solid $accent-color
+    color: $text-dark
+    box-shadow: 0px 10px 38px -9px rgba($accent-color,0.64)
+/* ------------------------------------------------*/
+/* Buttons & Controls Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Forms and Forms Reply Groups Colors Start
+/* ------------------------------------------------*/
+.form-light
+  ::-webkit-input-placeholder
+    font-weight: 300
+    color: $text-light-mute
+  :-moz-placeholder
+    font-weight: 300
+    color: $text-light-mute
+  ::-moz-placeholder
+    font-weight: 300
+    color: $text-light-mute
+  :-ms-input-placeholder
+    font-weight: 300
+    color: $text-light-mute
+
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: $text-light
+  input:required:valid,
+  textarea:required:valid
+    color: $text-light
+
+  input, textarea
+    border: 1px solid rgba($white, .4)
+    color: $text-light
+    &:focus
+      border: 1px solid $accent-color
+
+  .inputs-description
+    color: $text-light-mute
+
+.form-dark
+  ::-webkit-input-placeholder
+    color: rgba($text-dark, .7)
+  :-moz-placeholder
+    color: rgba($text-dark, .7)
+  ::-moz-placeholder
+    color: rgba($text-dark, .7)
+  :-ms-input-placeholder
+    color: rgba($text-dark, .7)
+
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: $text-dark
+  input:required:valid,
+  textarea:required:valid
+    color: $text-dark
+
+  input, textarea
+    border: 1px solid rgba($black, .3)
+    color: $text-dark
+    &:focus
+      border: 1px solid $accent-color-two
+
+  .inputs-description
+    color: $text-mute
+
+.reply-group__icon
+  color: $accent-color-two
+  &.light
+    color: $accent-color
+
+.reply-group__title
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.reply-group__text
+  color: $text-base
+  &.light
+    color: $text-light-base
+/* ------------------------------------------------*/
+/* Forms and Forms Reply Groups Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Main Section Colors Start
+/* ------------------------------------------------*/
+.main
+  background-color: $base-color
+
+.main__content
+  background-color: $base-color
+
+.main__media
+  background-color: $accent-color-two
+  background-image: url("../../img/svg/bg-gradient-main.svg")
+/* ------------------------------------------------*/
+/* Main Section Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Menu Colors Start
+/* ------------------------------------------------*/
+.menu
+  background-color: $base-color
+  background-image: url("../../img/svg/bg-lines-menu.svg")
+/* ------------------------------------------------*/
+/* Menu Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Socials Colors Start
+/* ------------------------------------------------*/
+.socials-text
+  li
+    a
+      color: $text-base
+      .no-touch &:hover
+        color: $accent-color-two
+  &.light
+    li
+      a
+        color: $text-light-base
+        .no-touch &:hover
+          color: $accent-color
+
+.email-link
+  color: $text-base
+  .no-touch &:hover
+    color: $accent-color-two
+  &.light
+    color: $text-light-base
+    .no-touch &:hover
+      color: $accent-color
+/* ------------------------------------------------*/
+/* Socials Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Countdown Colors Start
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Countdown Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Content Section Colors Start
+/* ------------------------------------------------*/
+.inner
+  background-color: $additional-color
+
+.inner__media
+  background-color: $accent-color-two
+  background-image: url("../../img/svg/bg-gradient-main.svg")
+/* ------------------------------------------------*/
+/* Content Section Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Custom Skillbars Colors Start
+/* ------------------------------------------------*/
+.skillbar-title
+  color: $text-dark
+
+.skillbar-bar
+  background-color: $accent-color-two
+
+.skill-bar-percent
+  color: $text-dark
+/* ------------------------------------------------*/
+/* Custom Skillbars Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Features Colors Start
+/* ------------------------------------------------*/
+.features__title
+  color: $text-dark
+  &.light
+    color: $text-light
+
+.features__text
+  color: $text-base
+  &.light
+    color: $text-light-base
+/* ------------------------------------------------*/
+/* Features Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Team Colors Start
+/* ------------------------------------------------*/
+.team__title
+  color: $text-dark
+  small
+    color: $text-mute
+
+.team__text
+  color: $text-base
+
+.team__socials
+  li
+    a
+      color: $text-mute
+    .no-touch &:hover
+      a
+        color: $accent-color-two
+/* ------------------------------------------------*/
+/* Team Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Contact Data Colors Start
+/* ------------------------------------------------*/
+.contact-data__text
+  color: $text-mute
+  a
+    color: $text-mute
+    &::after
+      background-color: $accent-color-two
+    .no-touch &:hover
+      color: $text-dark
+
+.contact-data__socials
+  li
+    a
+      color: $text-mute
+      &::after
+        background-color: $accent-color-two
+    .no-touch &:hover
+      a
+        color: $text-dark
+/* ------------------------------------------------*/
+/* Contact Data Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Google Map Colors Start
+/* ------------------------------------------------*/
+#zoom-in, #zoom-out
+  color: $text-dark
+  background-color: $accent-color
+
+  .btn-icon
+    color: $text-dark
+
+  .no-touch &:hover
+    background-color: shade($accent-color, 20%)
+/* ------------------------------------------------*/
+/* Google Map Colors End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Gallery Custom colors Start
+/* ------------------------------------------------*/
+.my-gallery
+  figure
+    &:nth-of-type(1)
+      &::after
+        background-color: $accent-color-two
+        background: linear-gradient(to bottom, rgba($accent-color-two,0) 0%,rgba($accent-color-two,0) 30%,rgba($accent-color-two,0.8) 100%)
+    &:nth-of-type(2), &:nth-of-type(3)
+      &::after
+        background-color: $base-color
+        background: linear-gradient(to bottom, rgba($base-color,0) 0%,rgba($base-color,0) 30%,rgba($base-color,0.6) 100%)
+    &:nth-of-type(4)
+      &::after
+        background-color: $accent-color
+        background: linear-gradient(to bottom, rgba($accent-color,0) 0%,rgba($accent-color,0) 30%,rgba($accent-color,0.8) 100%)
+
+
+    figcaption
+      h4
+        color: $black
+        small
+          color: $black
+
+    &:nth-of-type(2), &:nth-of-type(3)
+      figcaption
+        h4
+          color: $text-light
+          small
+            color: rgba($text-light, .8)
+
+    +MQ(XL)
+      &:nth-of-type(1)
+        &::after
+          background: rgba($accent-color-two, .8)
+      &:nth-of-type(2), &:nth-of-type(3)
+        &::after
+          background: rgba($base-color, .8)
+      &:nth-of-type(4)
+        &::after
+          background: rgba($accent-color, .8)
+
+.pswp__caption__center
+  h4
+    color: $text-light
+    small
+      color: $text-light-base
+  p
+    color: $text-light-mute
+
+.pswp__bg
+  background: shade($base-color, 20%)
+
+.pswp__button--close
+  background-color: $accent-color
+/* ------------------------------------------------*/
+/* Gallery Custom colors End
+/* ------------------------------------------------*/

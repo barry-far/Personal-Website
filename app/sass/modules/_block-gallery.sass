@@ -1,0 +1,157 @@
+.gallery
+  position: relative
+
+.my-gallery
+  figure
+    position: relative
+    margin: 0
+    overflow: hidden
+    cursor: pointer
+    &::after
+      content: ''
+      +position(absolute, 0 null null 0)
+      width: 100%
+      height: 100%
+      opacity: 1
+      transition: transform .5s, opacity .5s
+    &:nth-of-type(1)
+      &::after
+        background-color: $accent-color-two
+        background: linear-gradient(to bottom, rgba($accent-color-two,0) 0%,rgba($accent-color-two,0) 30%,rgba($accent-color-two,0.8) 100%)
+    &:nth-of-type(2), &:nth-of-type(3)
+      &::after
+        background-color: $base-color
+        background: linear-gradient(to bottom, rgba($black,0) 0%,rgba($black,0) 30%,rgba($black,0.6) 100%)
+    &:nth-of-type(4)
+      &::after
+        background-color: $accent-color
+        background: linear-gradient(to bottom, rgba($accent-color,0) 0%,rgba($accent-color,0) 30%,rgba($accent-color,0.8) 100%)
+
+
+    figcaption
+      +position(absolute, 3rem null null 3rem)
+      width: calc(100% - 6rem)
+      height: calc(100% - 6rem)
+      text-align: center
+      z-index: 1
+      h4
+        +position(absolute, null null 0 0)
+        width: 100%
+        color: $black
+        small
+          color: $black
+      p
+        display: none
+
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+      figcaption
+        h4
+          color: $text-light
+          small
+            color: rgba($text-light, .8)
+
+    +MQ(XL)
+      height: 50vh
+      &::after
+        opacity: 0
+        transition: transform .5s, opacity .5s
+      &:nth-of-type(1)
+        &::after
+          background: rgba($accent-color-two, .8)
+      &:nth-of-type(2), &:nth-of-type(3)
+        &::after
+          background: rgba($black, .8)
+      &:nth-of-type(4)
+        &::after
+          background: rgba($accent-color, .8)
+
+      img
+        width: auto
+        height: 50vh
+
+      .works-image
+        opacity: 0
+
+      .works-link
+        position: relative
+        float: left
+        width: 100%
+        height: 100%
+        overflow: hidden
+        text-align: center
+
+        .picture
+          +position(absolute, 0 null null 0)
+          width: 100%
+          height: 100%
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          transition: background-position .5s
+
+      figcaption
+        h4
+          top: 50%
+          bottom: auto
+          transform: translateY(calc(-50% + 1.6rem))
+          opacity: 0
+          transition: transform .5s, opacity .5s
+
+      .no-touch &:hover
+        &::after
+          opacity: 1
+        figcaption
+          h4
+            transform: translateY(-50%)
+            opacity: 1
+
+.pswp__caption__center
+  text-align: center
+  h4
+    font: normal 400 2.4rem/1.2 $title-font
+    letter-spacing: -0.1rem
+    color: $text-light
+    margin-bottom: 1.2rem
+    small
+      display: block
+      font: normal 400 1.3rem/1.2 $title-font
+      text-transform: uppercase
+      letter-spacing: 0.06rem
+      color: $text-light-base
+  p
+    font: normal 400 1.4rem/1.6 $default-font
+    color: $text-light-mute
+  +MQ(XXL)
+    h4
+      small
+        font-size: 1.4rem
+
+.pswp__counter
+  font-family: $title-font
+
+.pswp__button--close
+  opacity: 1
+
+.pswp__button--arrow--left::before, .pswp__button--arrow--right::before
+  width: 44px
+  height: 44px
+
+.pswp__button--arrow--left:before
+  left: 0
+  background-position: -132px -44px
+
+.pswp__button--arrow--right:before
+  right: 0
+  background-position: -88px -44px
+
+.pswp__bg
+  background: shade($base-color, 20%)
+
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption
+  background-color: rgba(0,0,0,.5)
+
+.pswp__caption, .pswp__top-bar
+  background-color: rgba(0,0,0,.5)
+
+.pswp__button--close
+  background-color: $white
