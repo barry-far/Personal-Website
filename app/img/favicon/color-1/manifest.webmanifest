@@ -1,11 +1,23 @@
 {
-  "name": "Oomph - Coming Soon & Landing Page Template",
-  "short_name": "Oomph",
+  "name": "Bardia Fardar Portfolio",
+  "short_name": "Bardia Portfolio",
+  "description": "Personal Portfolio of Bardia Fardar - Software Engineer & UI/UX Designer",
+  "start_url": "/app/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9854c5",
   "icons": [
-    { "src": "/img/favicon/color-1/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/img/favicon/color-1/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
-  ],
-  "theme_color": "#efefef",
-  "background_color": "#efefef",
-  "display": "standalone"
+    {
+      "src": "/app/img/favicon/color-1/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app/img/favicon/color-1/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

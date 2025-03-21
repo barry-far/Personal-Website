@@ -1,0 +1,189 @@
+/* Project Sharing Styles */
+
+/* Share Container Styles */
+.share-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Share Button Label */
+.share-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Share Buttons */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+}
+
+.share-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.share-btn.twitter {
+  background-color: #1da1f2;
+}
+
+.share-btn.facebook {
+  background-color: #1877f2;
+}
+
+.share-btn.whatsapp {
+  background-color: #25d366;
+}
+
+.share-btn.copy {
+  background-color: #666;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn i {
+  font-size: 1.2rem;
+}
+
+/* Copy Link Notification */
+.project-link-copied {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Link copied notification */
+.copy-notification {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.copy-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Project Direct Link */
+.project-direct-link {
+  display: none;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.project-direct-link:hover {
+  background: #e5e5e5;
+}
+
+.project-direct-link::after {
+  content: "Click to copy";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  opacity: 0.7;
+}
+
+/* Project QR Code */
+.project-qr-container {
+  display: none;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.project-qr-container img {
+  max-width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.project-qr {
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.project-qr-container p {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.qr-toggle {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #666;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.qr-toggle:hover {
+  background: #555;
+  transform: translateY(-1px);
+}
+
+/* Responsive adaptations */
+@media (max-width: 767px) {
+  .share-container {
+    justify-content: center;
+  }
+  
+  .project-direct-link {
+    font-size: 12px;
+  }
+  
+  .project-direct-link::after {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

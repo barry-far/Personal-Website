@@ -1,54 +1,38 @@
 {
-  "name": "barryfa",
-  "version": "1.0.3",
-  "description": "Bardia Fardar Portfolio Website",
+  "name": "barry-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website for Barry Fardar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "optimize-images": "imagemin app/img/**/* --out-dir=app/img/optimized",
+    "minify-css": "cleancss -o app/css/main.min.css app/css/main.css",
+    "minify-js": "uglifyjs app/js/custom.js -o app/js/custom.min.js",
+    "build": "npm run optimize-images && npm run minify-css && npm run minify-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barry-far/websitee.git"
   },
   "keywords": [
-    "Bardia Fardar",
-    "Portfolio",
-    "Software Engineer Portfolio",
-    "Barry Fardar",
-    "بردیا فاردار",
-    "Professional Web Developer",
-    "Creative Portfolio Website",
-    "Professional Web Developer",
-    "html5",
-    "css3",
-    "UI/UX Designer Portfolio",
-    "clean",
-    "agency",
-    "Innovative Software Solutions",
-    "Creative Design Portfolio",
-    "Software Development Skills"
+    "portfolio",
+    "web development",
+    "ui/ux design",
+    "personal website"
   ],
-  "author": "barryfa",
-  "license": "ISC",
+  "author": "Barry Fardar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barry-far/websitee/issues"
+  },
+  "homepage": "https://github.com/barry-far/websitee#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.0",
-    "ajaxchimp": "^1.3.0",
-    "bootstrap": "^5.2.2",
-    "browser-sync": "^2.27.5",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-cache": "^1.1.3",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-uglify-es": "^3.0.0",
-    "jquery": "^3.6.0",
-    "jquery-mousewheel": "^3.1.13",
-    "jquery.transit": "^0.9.12",
-    "kbw-countdown": "^2.1.1",
-    "magnific-popup": "^1.1.0",
-    "node-bourbon": "^4.2.8",
-    "particles.js": "^2.0.0",
-    "photoswipe": "^4.1.3",
-    "sass": "^1.41.1",
+    "clean-css-cli": "^5.6.2",
+    "imagemin-cli": "^7.0.0",
+    "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.1",
     "typed.js": "^2.0.12",
     "vegas": "^2.5.4"
   }

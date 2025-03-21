@@ -357,7 +357,6 @@ img {
   animation: rotate 4s linear infinite;
 }
 
-
 /* ------------------------------------------------*/
 /* Base CSS Styles End */
 /* ------------------------------------------------*/
@@ -2988,3 +2987,655 @@ form .inputs-description {
 /* ------------------------------------------------*/
 /* Gallery Custom Styles End */
 /* ------------------------------------------------*/
+
+/* Main CSS File with performance optimizations */
+
+/* Font Optimization */
+@font-face {
+  font-family: 'YourMainFont';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; /* Improves text rendering */
+  src: url('../fonts/your-main-font.woff2') format('woff2');
+}
+
+/* Global styles optimized for rendering */
+:root {
+  --primary-color: #9854c5;
+  --secondary-color: #333;
+  --text-color: #212121;
+  --bg-color: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'YourMainFont', Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Image optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Link optimizations */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover, a:focus {
+  color: darken(var(--primary-color), 10%);
+}
+
+/* Container styles with will-change optimization */
+.section {
+  position: relative;
+  will-change: transform, opacity;
+}
+
+/* Add here the rest of your existing CSS */
+
+/* Performance optimizations for animations */
+.transition-el, .loading-el {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Certifications styles */
+.Certifications__container {
+  margin-top: 2rem;
+}
+
+.Certifications__container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Certification__ex {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Certification__ex:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mg-left-2rem {
+  margin-left: 2rem;
+}
+
+.mg-top-0 {
+  margin-top: 0;
+}
+
+.mg-top-6 {
+  margin-top: 6px;
+}
+
+.Certifications__date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .Certification__ex {
+    flex-direction: column;
+  }
+  
+  .mg-left-2rem {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+/* Print styles for accessibility */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
+
+/* Desktop gallery fixes */
+@media (min-width: 1200px) {
+  /* Make sure gallery items use full height in desktop view */
+  .my-gallery figure {
+    height: 100%;
+  }
+  
+  /* Ensure the image container takes full height */
+  .image-container {
+    height: 100%;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adjust height for figures to be consistent */
+  .works-image {
+    height: 100%;
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Ensure caption stays at bottom */
+  .works-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show caption on hover */
+  .my-gallery figure:hover .works-description {
+    opacity: 1;
+  }
+}
+
+/* Project detail links styling */
+.project-detail-link {
+  display: inline-block;
+  margin-top: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* PhotoSwipe project links styling */
+.pswp__project-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pswp__project-link .btn {
+  display: inline-block;
+  min-width: 180px;
+}
+
+/* Fix PhotoSwipe lightbox display */
+.pswp__img {
+  max-width: 90% !important;
+  max-height: 90vh !important;
+  margin: 0 auto;
+  object-fit: contain !important;
+}
+
+/* Override any conflicting styles */
+.pswp__zoom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix for mobile display */
+@media (max-width: 767px) {
+  .gallery figure {
+    margin-bottom: 15px;
+  }
+  
+  .works-description {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .project-detail-link {
+    margin-bottom: 10px;
+  }
+}
+
+/* Project Container Styles */
+.project-container {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+
+.project-container:last-child {
+  border-bottom: none;
+}
+
+.project-container:hover {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.project-image-container {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.03);
+}
+
+.project-details {
+  padding: 1rem 0;
+}
+
+.project-details h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.project-details h5 {
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.project-details p {
+  margin-bottom: 1.5rem;
+}
+
+.project-detail-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments for project containers */
+@media (max-width: 767px) {
+  .project-container {
+    padding: 2rem 1rem;
+  }
+  
+  .project-image-container {
+    margin-bottom: 1rem;
+  }
+  
+  .project-details {
+    padding: 0.5rem 0;
+  }
+  
+  .row.flex-row-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
+
+/* Project Details Panel Styles */
+.project-details-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 9999;
+  padding: 4rem 2rem 2rem;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-details-panel.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.panel-close i {
+  color: white;
+  font-size: 20px;
+}
+
+.panel-close:hover {
+  transform: rotate(90deg);
+}
+
+.project-full-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-full-details h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.project-full-details h4 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #666;
+  font-style: italic;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .project-container {
+    padding: 2rem 1rem;
+  }
+  
+  .project-details-panel {
+    padding: 4rem 1rem 1rem;
+  }
+  
+  .project-full-details {
+    padding: 1rem;
+  }
+  
+  .details-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .row.flex-row-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
+
+/* Desktop gallery fixes */
+@media (min-width: 1200px) {
+  /* Make sure gallery items use full height in desktop view */
+  .my-gallery figure {
+    height: 100%;
+  }
+  
+  /* Ensure the image container takes full height */
+  .image-container {
+    height: 100%;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Adjust height for figures to be consistent */
+  .works-image {
+    height: 100%;
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Ensure caption stays at bottom */
+  .works-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Show caption on hover */
+  .my-gallery figure:hover .works-description {
+    opacity: 1;
+  }
+}
+
+/* Extended Project Styles */
+.project-container {
+  scroll-margin-top: 2rem;
+}
+
+.project-container:nth-child(even) {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.project-details-panel .project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.project-details-panel .project-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-details-panel .project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.project-details-panel .details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-details-panel .details-meta span {
+  background: rgba(152, 84, 197, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Project Slideshow Styles */
+.project-slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  height: 400px; /* Fixed height for the slideshow */
+}
+
+.slideshow-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%; /* Make container take full height */
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  height: 100%; /* Make slide take full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide img {
+  width: auto; /* Auto width instead of 100% */
+  max-width: 100%; /* Ensure image doesn't exceed slide width */
+  height: auto; /* Auto height */
+  max-height: 100%; /* Ensure image doesn't exceed slide height */
+  object-fit: contain; /* Contain the image within the slide */
+  display: block;
+}
+
+/* Mobile-specific adjustments for tall mobile screenshots */
+.slideshow-container[id="slideshow-zero-bomber"] .slide img {
+  max-height: 400px; /* Limit the height of mobile screenshots */
+  width: auto; /* Allow width to adjust proportionally */
+  margin: 0 auto; /* Center the image */
+}
+
+.slide-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+.slide-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.slide-nav:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slide-prev {
+  left: 10px;
+}
+
+.slide-next {
+  right: 10px;
+}
+
+/* Static Gallery Styles */
+.static-gallery {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.static-gallery h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.static-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.static-image {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.static-image:hover {
+  transform: translateY(-5px);
+}
+
+.static-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

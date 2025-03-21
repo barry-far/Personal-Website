@@ -7,6 +7,7 @@
  *  4. Magnific Popup
  *  5. Vegas Plugin
  *  6. PhotoSwipe Gallery
+ *  7. Common Utilities
  * ------------------------------------------------
  * Table of Contents End
  * ------------------------------------------------ */
@@ -20829,4 +20830,63 @@ a.pswp__share--download:hover {
 
 /* ------------------------------------------------*/
 /* PhotoSwipe Gallery Styles End */
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Common Utilities Start */
+/* ------------------------------------------------*/
+/* Optimized plugins.css - reduces file size by combining similar rules */
+
+/* Common transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Skillbars styles */
+.skillbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.skillbar-bar {
+  height: 6px;
+  width: 0;
+  background-color: #9854c5;
+  border-radius: 3px;
+  position: relative;
+  transition: width 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.skillbar-title {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Particles.js */
+#particles-js,
+#triangles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ------------------------------------------------*/
+/* Common Utilities End */
 /* ------------------------------------------------*/
